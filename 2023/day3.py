@@ -14,8 +14,7 @@ def get_bounding_box(matrix: list[list], x1: int, y1: int, x2: int, y2: int) -> 
     return bounding_box, top_left_coordinate
 
 
-def find_number_coordinates(matrix: list[list]) -> list[list]:
-    """ returns [[x, y], number_length] """
+def find_number_coordinates(matrix: list[list]) -> list[list[int, int], int]:
     digit_coords = []
 
     for row in range(len(matrix)):
