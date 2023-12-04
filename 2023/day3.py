@@ -69,7 +69,7 @@ def part2(content: str) -> int:
     matrix = create_string_matrix(content)
     num_info = find_number_coordinates(matrix)
 
-    gears = dict()
+    gears = {}
     for (x, y), length in num_info:
         bounding_box, (bbx, bby) = get_bounding_box(matrix, x, y, x + length - 1, y)
         if any('*' in row for row in bounding_box):
