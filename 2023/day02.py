@@ -41,5 +41,5 @@ def part2(content: str) -> int:
     return total
 
 
-print(f"Part 1: {part1(read_input('day2.txt'))}")  # 2006
-print(f"Part 2: {part2(read_input('day2.txt'))}")  # 84911
+print(f"Part 1: {part1(read_input(__file__))}")  # 2006
+print(f"Part 2: {part2(read_input(__file__))}")  # 84911

@@ -83,5 +83,5 @@ def part2(content: str) -> int:
     return sum(prod(v) for v in gears.values() if len(v) >= 2)
 
 
-print(f"Part 1: {part1(read_input('day3.txt'))}")  # 540131
-print(f"Part 2: {part2(read_input('day3.txt'))}")  # 86879020
+print(f"Part 1: {part1(read_input(__file__))}")  # 540131
+print(f"Part 2: {part2(read_input(__file__))}")  # 86879020

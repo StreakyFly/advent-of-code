@@ -38,5 +38,5 @@ def part2(content: str) -> int:
     return total_cards
 
 
-print(f"Part 1: {part1(read_input('day4.txt'))}")  # 20667
-print(f"Part 2: {part2(read_input('day4.txt'))}")  # 5833065
+print(f"Part 1: {part1(read_input(__file__))}")  # 20667
+print(f"Part 2: {part2(read_input(__file__))}")  # 5833065
