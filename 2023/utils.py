@@ -1,7 +1,7 @@
 import os
 
 
-def read_input(script_path: str, part: int = 0) -> str:
+def read_input(script_path: str, part: int = None) -> str:
     py_filename = os.path.basename(script_path)
     basename, _ = os.path.splitext(py_filename)
 
