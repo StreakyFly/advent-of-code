@@ -5,15 +5,6 @@ def remove_non_digits(s: str) -> str:
     return ''.join([i for i in s if i.isdigit()])
 
 
-def part1(content: str) -> int:
-    nums = []
-    for s in content.split('\n'):
-        s = remove_non_digits(s)
-        nums.append(int(f"{s[0]}{s[-1]}"))
-
-    return sum(nums)
-
-
 def digitify(s: str) -> str:
     NUM_WORDS = {'one': 'o1e', 'two': 't2o', 'three': 't3e',
                  'four': 'f4r', 'five': 'f5e', 'six': 's6x',
@@ -22,6 +13,15 @@ def digitify(s: str) -> str:
     for k, v in NUM_WORDS.items():
         s = s.replace(k, v)
     return s
+
+
+def part1(content: str) -> int:
+    nums = []
+    for s in content.split('\n'):
+        s = remove_non_digits(s)
+        nums.append(int(f"{s[0]}{s[-1]}"))
+
+    return sum(nums)
 
 
 def part2(content: str) -> int:
