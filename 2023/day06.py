@@ -3,7 +3,7 @@ from math import prod, ceil, sqrt
 from utils import read_input
 
 
-def parse_input(content: str) -> (list[int, ...], list[int, ...]):
+def parse_input(content: str) -> (list[int], list[int]):
     l_times, l_distances = content.splitlines()
     times = [int(i) for i in l_times.split()[1:]]
     distances = [int(i) for i in l_distances.split()[1:]]
