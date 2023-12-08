@@ -1,7 +1,7 @@
 from utils import read_input
 
 
-def parse_input(content: str) -> (list, dict[tuple: list[tuple[int, int, int]]]):
+def parse_input(content: str) -> (list, dict[tuple, list[tuple[int, int, int]]]):
     seeds, *mapping = content.split('\n\n')
 
     seeds = [int(i) for i in seeds.split()[1:]]
