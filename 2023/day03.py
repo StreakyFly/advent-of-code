@@ -2,6 +2,10 @@ from math import prod
 from utils import read_input
 
 
+def parse_input(content: str) -> list[list]:
+    return [list(line) for line in content.splitlines()]
+
+
 def get_bounding_box(matrix: list[list], x1: int, y1: int, x2: int, y2: int) -> tuple[list[list], tuple[int, int]]:
     rows, cols = len(matrix), len(matrix[0])
 
@@ -42,17 +46,12 @@ def contains_symbol(bounding_box: list[list]) -> bool:
     return False
 
 
-def create_string_matrix(content: str) -> list[list]:
-    rows = content.strip().split('\n')
-    return [list(row) for row in rows]
-
-
 def get_string_from_matrix(matrix: list[list], x: int, y: int, string_length: int) -> str:
     return ''.join(matrix[y][x + i] for i in range(string_length) if 0 <= x + i < len(matrix[y]))
 
 
 def part1(content: str) -> int:
-    matrix = create_string_matrix(content)
+    matrix = parse_input(content)
     num_info = find_number_coordinates(matrix)
 
     valid_numbers = []
@@ -66,7 +65,7 @@ def part1(content: str) -> int:
 
 
 def part2(content: str) -> int:
-    matrix = create_string_matrix(content)
+    matrix = parse_input(content)
     num_info = find_number_coordinates(matrix)
 
     gears = {}
